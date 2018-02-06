@@ -26,3 +26,5 @@ This Tutorial was created using Tableau Desktop 10.5 running on Windows 10 and D
 ## Now Lets connect Tableau to DSE 
 
 * First we need to find the ip address of your spark master by running on your DSE node `dsetool status`
+
+![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/dsetool_status.png)
