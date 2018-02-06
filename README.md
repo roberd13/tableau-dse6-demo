@@ -40,5 +40,21 @@ This Tutorial was created using Tableau Desktop 10.5 running on Windows 10 and D
 
 ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/connection.png)
 
-*
+* When your workbook opens after Signing in. Under the Data Source tab
+  * Select **Spark** as the Database
+  * Search Schema using the drop down and Select **Killr_video** 
+  * Search Table using the drop down and your tables will be listed
+  * Drag **videos and videos_by_actor** to the tables area
   
+![]( 
+
+  * Be sure to keep a Live connection, if you use Extract all of the data will be loaded into Tableau
+  * Create an inner join clause for Release Year = Release Year (Videos By Actor. (click on the blue part of the link between the 2 tables to be able to edit this inner join)
+
+![](  
+
+  * Click **Update Now** to see a sample of your data
+  
+![](
+
+
