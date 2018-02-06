@@ -24,7 +24,7 @@ This Tutorial was created using Tableau Desktop 10.5 running on Windows 10 and D
 * Download the demo data to your DSE node from https://github.com/roberd13/DSE-Spark-with-Tableau/tree/master/DemoData
   * Run the cqlscript.sh script to create schemas and load the data. A Keyspace named **killr_video** with 2 tables **videos** and **videos_by_actor** will be created.
 
-## Now we have all of that out of the way Lets connect Tableau to DSE and have some fun
+## Now lets Create a Connection to DSE in Tableau
 
 * First we need to find the ip address of your spark master by running on your DSE node `dsetool status`
 
@@ -48,7 +48,7 @@ This Tutorial was created using Tableau Desktop 10.5 running on Windows 10 and D
   
 ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/Data%20Source.png) 
 
-  * Be sure to keep a Live connection, if you use Extract all of the data will be loaded into Tableau
+  * Be sure to keep a Live connection, if you use Extract, all of the data will be loaded into Tableau
   * Create an inner join clause for Release Year = Release Year (Videos By Actor. (click on the blue part of the link between the 2 tables to be able to edit this inner join)
 
 ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/Join%20clause.png)  
@@ -57,4 +57,29 @@ This Tutorial was created using Tableau Desktop 10.5 running on Windows 10 and D
   
 ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/Updated%20Data.png)
 
+## Now Lets See the Count of Each of the Movie Ratings Per Year
 
+* Click on Sheet 1 Tab at the bottom 
+  * Convert Release Year (Videos By Actor) to Discrete
+  
+  ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/discrete.png)
+  
+  * Drag Mpaa Rating to the Marks section
+   
+  ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/Marks.png)
+  
+  * Drag Release Year (Videos By Actor) to Columns
+  * Drag Mpaa Rating to Rows
+  * Change the Mpaa Rating under rows to a Count Measure type by using the drop down 
+  
+  ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/measure.png)
+  
+  * Select Stacked Bar on the Show Me snap on 
+  
+  ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/showme.png)
+  
+  * Click Show Me to hide the snap on 
+  
+* You now have a color coded graph with the Count of Each of the Movie Ratings Per Year
+
+![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/graph.png)
