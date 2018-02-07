@@ -48,7 +48,7 @@ This Tutorial was created using Tableau Desktop 10.5 running on Windows 10 and D
   
 ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/Data%20Source.png) 
 
-  * Be sure to keep a Live connection, if you use Extract, all of the data will be loaded into Tableau
+  * Be sure to keep a Live connection, if you use Extract, all of the data will be loaded into Tableau.  We want to utilize Spark to perform the join on the server side.
   * Create an inner join clause for Release Year = Release Year (Videos By Actor. (click on the blue part of the link between the 2 tables to be able to edit this inner join)
 
 ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/Join%20clause.png)  
@@ -57,7 +57,7 @@ This Tutorial was created using Tableau Desktop 10.5 running on Windows 10 and D
   
 ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/Updated%20Data.png)
 
-## Now Lets See the Count of Each of the Movie Ratings Per Year
+## Now Lets See the Count of Movies grouped by Movie Ratings Per Year
 
 * Click on Sheet 1 Tab at the bottom 
   * Convert Release Year (Videos By Actor) to Discrete
@@ -80,6 +80,6 @@ This Tutorial was created using Tableau Desktop 10.5 running on Windows 10 and D
   
   * Click Show Me to hide the snap on 
   
-* You now have a color coded graph with the Count of Each of the Movie Ratings Per Year
+* You now have a color coded graph with the Count of Movies grouped by Movie Ratings Per Year
 
 ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/graph.png)
