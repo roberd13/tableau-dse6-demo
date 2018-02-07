@@ -40,7 +40,7 @@ This Tutorial was created using Tableau Desktop 10.5 running on Windows 10 and D
 
 ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/connection.png)
 
-* When your workbook opens after Signing in. Under the Data Source tab
+* When your workbook opens after Signing in. On the Data Source tab under connections.
   * Select **Spark** as the Database
   * Search Schema using the drop down and Select **Killr_video** 
   * Search Table using the drop down and your tables will be listed
