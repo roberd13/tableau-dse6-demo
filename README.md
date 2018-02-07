@@ -1,4 +1,4 @@
-### This is a simple tutorial that walks you through connecting Tableau to DSE via Spark ODBC driver and creating a simple Tableau workbook to analyze data in DSE
+### This is a simple tutorial that walks you through connecting Tableau to DataStax DSE via Spark ODBC driver and creating a simple Tableau workbook to analyze data in DataStax DSE
 
 This Tutorial was created using Tableau Desktop 10.5 running on Windows 10 and DSE 5.1.5 
 
