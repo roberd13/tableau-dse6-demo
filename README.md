@@ -1,4 +1,8 @@
-### DataStax Enterprise is the always-on data platform designed to allow you to effortlessly build and scale your apps, integrating graph, search, analytics, administration, developer tooling, and monitoring into a single unified platform.  Tableau is an industy leading BI too that focuses on data visualization, dashboarding and data discovery.  It can be characterized as a "Visual Analytics" application - you don't just use it to visualize data, but instead you conduct analysis through seeing the data in visuals.  So why not utilize the power of Both DataStax Enterprise and Tableau.
+## DataStax Enterprise is the always-on data platform designed to allow you to effortlessly build and scale your apps, integrating graph, search, analytics, administration, developer tooling, and monitoring into a single unified platform.  
+
+## Tableau is an industy leading BI too that focuses on data visualization, dashboarding and data discovery.  It can be characterized as a "Visual Analytics" application - you don't just use it to visualize data, but instead you conduct analysis through seeing the data in visuals.  
+
+## So why not utilize the power of Both DataStax Enterprise and Tableau together.
 
 ### In this simple tutorial we will walk through connecting Tableau to DataStax DSE via Spark ODBC driver and creating a simple Tableau workbook to analyze data in DataStax DSE. We will Utilize DSE analytics to perform the computations, joins and aggregates on the server side (DSE) which is faster and more effecient, while harnesing Tableau to visual the data.
 
