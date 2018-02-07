@@ -4,7 +4,7 @@
 
 ## So why not utilize the power of Both DataStax Enterprise and Tableau together.
 
-### In this simple tutorial we will walk through connecting Tableau to DataStax Enterprise (DSE) via Spark ODBC driver and creating a simple Tableau workbook. We will Utilize DSE analytics to perform the computations, joins and aggregates on the server side (DSE) which is faster and more effecient, while harnesing Tableau to visual the data.
+### In this simple tutorial we will walk through connecting Tableau to DataStax Enterprise (DSE) via Spark ODBC driver and creating a simple Tableau workbook. We will Utilize DSE analytics to perform the computations, joins and aggregates on the server side (DSE) which is faster and more effecient, while harnesing Tableau to visualize the data.
 
 This Tutorial was created using Tableau Desktop 10.5 running on Windows 10 and DSE 5.1.5 
 
