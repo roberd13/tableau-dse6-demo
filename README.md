@@ -8,6 +8,7 @@ This Tutorial was created using Tableau Desktop 10.5 running on Windows 10 and D
 * A working DSE install running an Analytics workload.  
   * You can download DataStax Enterprise for free from https://academy.datastax.com/downloads and find installation instructions here http://docs.datastax.com/en/getting_started/doc/getting_started/installDSE.html 
   * Using a Docker Image by visiting [DataStax Docker Store](https://store.docker.com/images/datastax) Each user  must subscribe to the image (which is free) one time. Click Setup Instructions, fill out the form, and you will be given a docker pull command that is valid for that user account. Usage instructions can be found at https://github.com/datastax/docker-images
+    * You will need to expose the public port 10000 to allow Tableau to connect to the Spark Trift Server
     
 
 * A working Tableau Desktop install and basic Tableau understanding.  
