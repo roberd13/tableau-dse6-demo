@@ -49,7 +49,7 @@ This Tutorial was created using Tableau Desktop 10.5 running on Windows 10 and D
   
 ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/Data%20Source.png) 
 
-  * Be sure to keep a Live connection, if you use Extract, all of the data will be loaded into Tableau.  We want to utilize Spark to perform the computations, joins and aggregates on the server side (DSE) which is faster and more effecient. You will be able to Connect to your spark master by visiting http://<spark master ip>:4040/jobs/ to see all of the queries performed.
+  * Be sure to keep a Live connection, if you use Extract, all of the data will be loaded into Tableau.  We want to utilize Spark to perform the computations, joins and aggregates on the server side (DSE) which is faster and more effecient. You can connect to your spark master by visiting http://sparkmasterip:4040/jobs/ to see all of the queries performed during this tutorial.
   * Create an inner join clause for Release Year = Release Year (Videos By Actor. (click on the blue part of the link between the 2 tables to be able to edit this inner join)
 
 ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/Join%20clause.png)  
