@@ -71,7 +71,7 @@ This Tutorial was created using Tableau Desktop 10.5 running on Windows 10 and D
   
   ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/discrete.png)
   
-  * Drag Mpaa Rating to the Marks section
+  * Drag Mpaa Rating to Color in the Marks section
    
   ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/Marks.png)
   
