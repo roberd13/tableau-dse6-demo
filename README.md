@@ -1,4 +1,6 @@
-### This is a simple tutorial that walks you through connecting Tableau to DataStax DSE via Spark ODBC driver and creating a simple Tableau workbook to analyze data in DataStax DSE
+### DataStax Enterprise is the always-on data platform designed to allow you to effortlessly build and scale your apps, integrating graph, search, analytics, administration, developer tooling, and monitoring into a single unified platform.  Tableau is an industy leading BI too that focuses on data visualization, dashboarding and data discovery.  It can be characterized as a "Visual Analytics" application - you don't just use it to visualize data, but instead you conduct analysis through seeing the data in visuals.  So why not utilize the power of Both DataStax Enterprise and Tableau.
+
+### In this simple tutorial we will walk through connecting Tableau to DataStax DSE via Spark ODBC driver and creating a simple Tableau workbook to analyze data in DataStax DSE. We will Utilize DSE analytics to perform the computations, joins and aggregates on the server side (DSE) which is faster and more effecient, while harnesing Tableau to visual the data.
 
 This Tutorial was created using Tableau Desktop 10.5 running on Windows 10 and DSE 5.1.5 
 
@@ -49,7 +51,7 @@ This Tutorial was created using Tableau Desktop 10.5 running on Windows 10 and D
   
 ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/Data%20Source.png) 
 
-  * Be sure to keep a Live connection, if you use Extract, all of the data will be loaded into Tableau.  We want to utilize Spark to perform the computations, joins and aggregates on the server side (DSE) which is faster and more effecient. You can connect to your spark master by visiting http://sparkmasterip:4040/jobs/ to see all of the queries performed during this tutorial.
+  * Be sure to keep a Live connection, if you use Extract, all of the data will be loaded into Tableau.  
   * Create an inner join clause for Release Year = Release Year (Videos By Actor. (click on the blue part of the link between the 2 tables to be able to edit this inner join)
 
 ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/Join%20clause.png)  
@@ -84,3 +86,5 @@ This Tutorial was created using Tableau Desktop 10.5 running on Windows 10 and D
 * You now have a color coded graph with the Count of Movies grouped by Movie Ratings Per Year
 
 ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/graph.png)
+
+### If you are curious what Tableau did under the hood, you can connect to your spark master by visiting http://sparkmasterip:4040/jobs/ to see all of the queries performed during this tutorial.
