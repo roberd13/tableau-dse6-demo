@@ -87,4 +87,8 @@ This Tutorial was created using Tableau Desktop 10.5 running on Windows 10 and D
 
 ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/graph.png)
 
-### If you are curious what Tableau did under the hood, you can connect to your spark master by visiting http://anyanalyticsnode:7080 which will take you to the Spark Master UI, you can then click <org.apache.spark.sql.hive.thriftserver.HiveThriftServer2> to see all of the queries performed during this tutorial.
+### If you are curious what Tableau did under the hood, you can visit http://anyanalyticsnode:7080 which will take you to the Spark Master UI, you can then click *org.apache.spark.sql.hive.thriftserver.HiveThriftServer2* to see all of the queries performed during this tutorial.
+
+![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/MasterUI.png)
+
+![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/Thrift%20UI.png)
