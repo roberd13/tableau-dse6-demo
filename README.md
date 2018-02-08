@@ -18,7 +18,7 @@ This Tutorial was created using Tableau Desktop 10.5 running on Windows 10 and D
     
 
 * A working Tableau Desktop install and basic Tableau understanding.  
-  * You can download free Tableau trial from https://www.tableau.com/products/trial 
+  * You can download a free Tableau trial from https://www.tableau.com/products/trial 
 
 
 ## The Simba ODBC Driver for Apache Spark
