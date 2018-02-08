@@ -33,16 +33,12 @@ This Tutorial was created using Tableau Desktop 10.5 running on Windows 10 and D
 
 ## Now lets Create a Connection to DSE in Tableau
 
-* First we need to find the ip address of your spark master by running on your DSE node `dsetool status`
-
-![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/dsetool_status.png)
-
-* Start the Spark SQL Thriftserver on your DSE spark master by running `dse spark-sql-thriftserver start`
+* Start the Spark SQL Thriftserver on one of your DSE analytics nodes by running `dse spark-sql-thriftserver start`
 * Open Tableau and create a connection to DSE by selecting Other Databases (ODBC) under To a Server.  You may need to click more to show this option
 
 * Setup your connection by selecting Driver => Simba Spark ODBC Driver => Connect
   * Enter a description
-  * Add the Spark master ipaddress to hosts and click OK
+  * Add the ipaddress of the node(s) running Spark SQL Thriftserver to hosts and click OK
   * Once the query completes click **Sign in** 
 
 ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/connection.png)
@@ -91,4 +87,4 @@ This Tutorial was created using Tableau Desktop 10.5 running on Windows 10 and D
 
 ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/graph.png)
 
-### If you are curious what Tableau did under the hood, you can connect to your spark master by visiting http://sparkmasterip:4040/jobs/ to see all of the queries performed during this tutorial.
+### If you are curious what Tableau did under the hood, you can connect to your spark master by visiting http://sparkmasterip:4040/jobs/sqlserver/ to see all of the queries performed during this tutorial.
