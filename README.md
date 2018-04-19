@@ -1,22 +1,25 @@
-## Built on the best distribution of Apache Cassandra™. DataStax Enterprise is the always-on data platform designed to allow you to effortlessly build and scale your apps, integrating graph, search, analytics, administration, developer tooling, and monitoring into a single unified platform.We power your apps' real-time moments so you can create instant insights and powerful customer experiences.  
+## Built on the best distribution of Apache Cassandra™. DataStax Enterprise is the always-on data platform designed to allow you to effortlessly build and scale your apps, integrating graph, search, analytics, administration, developer tooling, and monitoring into a single unified platform. We power your apps' real-time moments so you can create instant insights and powerful customer experiences.  
 
 ## Tableau is an industy leading BI too that focuses on data visualization, dashboarding and data discovery.  It can be characterized as a "Visual Analytics" application - you don't just use it to visualize data, but instead you conduct analysis through seeing the data in visuals.  
 
 ## So why not utilize the power of Both DataStax Enterprise and Tableau together.
 
-### In this simple tutorial we will walk through connecting Tableau to DataStax Enterprise (DSE) via Spark ODBC driver and creating a simple Tableau workbook. We will Utilize DSE analytics to perform the computations, joins and aggregates on the server side (DSE) which is faster and more effecient, while harnesing Tableau to visualize the data.
+### In this simple tutorial we will walk through connecting Tableau to a DataStax Enterprise (DSE) 6.0 Docker Container utilizing DSE Alwayson SQL via the Spark ODBC driver and creating a simple Tableau workbook. We will Utilize DSE analytics to perform the computations, joins and aggregates on the server side (DSE) which is faster and more effecient, while harnesing Tableau to visualize the data.
 
-This Tutorial was created using Tableau Desktop 10.5 running on Windows 10 and DSE 5.1.5 
+This Tutorial was created using a DSE 6.0 Docker Container and Tableau Desktop 10.5 running on Windows.
 
 ## Prerequisites
 
-* A DataStax Academy Account to Download/Install DSE and Simba ODBC Driver for Apache Spark:  If you do not already have one, visit https://academy.datastax.com/
-* A working DSE install running an Analytics workload.  
-  * You can download DataStax Enterprise for free from https://academy.datastax.com/downloads and find installation instructions here http://docs.datastax.com/en/getting_started/doc/getting_started/installDSE.html 
-  * Using a Docker Image by visiting [DataStax Docker Store](https://store.docker.com/images/datastax) Each user  must subscribe to the image (which is free) one time. Click Setup Instructions, fill out the form, and you will be given a docker pull command that is valid for that user account. Usage instructions can be found at https://github.com/datastax/docker-images
-    * You will need to expose the public port 10000 to allow Tableau to connect to the Spark Trift Server
-    
-
+* A DataStax Academy Account to Download and Install Simba ODBC Driver for Apache Spark:  If you do not already have one, visit https://academy.datastax.com/
+* A working DSE Docker container running an Analytics workload with the DataStax config volume mounted and the following Spar UI ports bound. 
+  * 10000, 7080, 7077, 4040, 9077
+  
+```
+docker run -e DS_LICENSE=accept --name my-dse -p 10000:10000 -p 7080:7080 -p 7077:7077 -p 4040:4040 -p 9077:9077 -v ~/config:/config -d datastax/dse-server -k 
+```
+  
+* Our Docker Images are hosted on [Docker Hub](https://hub.docker.com/r/datastax/dse-server/). For documentation including configuration options, environment variables, and compose examples head over to [DataStax Academy](https://academy.datastax.com/quick-downloads?utm_campaign=Docker_2019&utm_medium=web&utm_source=docker&utm_term=-&utm_content=Web_Academy_Downloads)
+   
 * A working Tableau Desktop install and basic Tableau understanding.  
   * You can download a free Tableau trial from https://www.tableau.com/products/trial 
 
@@ -26,10 +29,41 @@ This Tutorial was created using Tableau Desktop 10.5 running on Windows 10 and D
 * Download the Simba ODBC Driver for Apache Spark for your version of Microsoft Windows (32bit or 64bit) running Tableau Desktop by visiting https://academy.datastax.com/download-drivers
 * Install the Simba ODBC Driver for Apache Spark.
 
+## Enabling Alwayson SQL
+
+For advanced configuration management, we’re providing a simple mechanism to let you change or modify configurations without replacing or customizing the containers. You can add any of the approved config files to a mounted host volume and we’ll handle the hard work of mapping them within the container. You can read more about that feature [here](https://docs.datastax.com/en/docker/doc/docker/docker60/dockerDSEVolumes.html).  You enabled this feature when you started your DSE container and we will use it to enable alwayson sql
+
+* Alwayson sql is enabled via the dse.yaml. I have created a custom dse.yaml with the setting preconfigured to use for this demo.
+  * Download the dse.yaml found [here](https://github.com/roberd13/tableau-dse6-demo/blob/master/DemoData/dse.yaml) to your docker host machine and place it in the ~/config directory created when starting the DSE container
+     * If running linux or mac you can run the following command
+`wget -L https://raw.githubusercontent.com/roberd13/tableau-dse6-demo/master/DemoData/dse.yaml -O ~/config/dse.yaml`
+  * Restart your dse container so it will pick up the custom dse.yaml and start alwayson sql
+
 ## Demo Data
 
-* Download the demo data to your DSE node from https://github.com/roberd13/DSE-Spark-with-Tableau/tree/master/DemoData
-  * Run the cqlscript.sh script to create schemas and load the data. A Keyspace named **killr_video** with 2 tables **videos** and **videos_by_actor** will be created.
+* Download the demo data to your DSE Docker Container from https://github.com/roberd13/tableau-dse6-demo/tree/master/DemoData using the following commands
+
+```
+Create directory for the demo data
+docker exec -it my-dse mkdir /opt/dse/demodata
+
+Download the script to create the keyspace, table and load the data with dsbulk
+docker exec -it my-dse wget -L https://raw.githubusercontent.com/roberd13/tableau-dse6-demo/master/DemoData/cqlscript.sh -O /opt/dse/demodata/cqlscript.sh
+
+Change the permissions to allow execution of the script
+docker exec -it my-dse chmod +x /opt/dse/demodata/cqlscript.sh
+
+Download the demo data
+docker exec -it my-dse wget -L https://raw.githubusercontent.com/roberd13/tableau-dse6-demo/master/DemoData/videos.csv -O /opt/dse/demodata/videos.csv
+
+docker exec -it my-dse wget -L https://raw.githubusercontent.com/roberd13/tableau-dse6-demo/master/DemoData/videos_by_actor.csv -O /opt/dse/demodata/videos_by_actor.csv
+```
+
+  * Run the cqlscript.sh script to create schemas and load the data using the new dsebulk tool. A Keyspace named **killr_video** with 2 tables **videos** and **videos_by_actor** will be created.
+  
+```
+  docker exec -it  my-dse bash "/opt/dse/demodata/cqlscript.sh"
+```
 
 ## Now lets Create a Connection to DSE in Tableau
 
