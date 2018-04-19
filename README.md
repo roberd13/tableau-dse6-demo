@@ -14,7 +14,7 @@ This Tutorial was created using a DSE 6.0 Docker Container and Tableau Desktop 1
 
 * Docker installed on your local system, see [Docker Installation Instructions](https://docs.docker.com/engine/installation/). 
 
-* A working DSE Docker container running an Analytics workload with the DataStax config volume mounted and the following Spark UI ports bound. 
+* A working DSE Docker container running an Analytics workload with the DataStax config volume mounted and the following AlwaysOnSQL/Spark UI ports bound. 
   * 10000, 7080, 7077, 4040, 9077
   
 ```
