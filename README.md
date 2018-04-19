@@ -87,7 +87,7 @@ docker exec -it my-dse wget -L https://raw.githubusercontent.com/roberd13/tablea
   * Add the ipaddress of the node(s) running Spark SQL Thriftserver to hosts and click OK
   * Once the query completes click **Sign in** 
 
-![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/connection.png)
+![](https://github.com/roberd13/tableau-dse6-demo/blob/master/images/connection.png)
 
 * When your workbook opens after Signing in. On the Data Source tab under connections.
   * Select **Spark** as the Database
@@ -95,49 +95,49 @@ docker exec -it my-dse wget -L https://raw.githubusercontent.com/roberd13/tablea
   * Search Table using the drop down and your tables will be listed
   * Drag **videos and videos_by_actor** to the tables area
   
-![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/Data%20Source.png) 
+![](https://github.com/roberd13/tableau-dse6-demo/blob/master/images/Data%20Source.png) 
 
   * Be sure to keep a Live connection, if you use Extract, all of the data will be loaded into Tableau.  
   * Create an inner join clause for Release Year = Release Year (Videos By Actor. (click on the blue part of the link between the 2 tables to be able to edit this inner join)
 
-![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/Join%20clause.png)  
+![](https://github.com/roberd13/tableau-dse6-demo/blob/master/images/Join%20clause.png)  
 
   * Click **Update Now** to see a sample of your data
   
-![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/Updated%20Data.png)
+![](https://github.com/roberd13/tableau-dse6-demo/blob/master/images/Updated%20Data.png)
 
 ## Now Lets See the Count of Movies grouped by Movie Ratings Per Year
 
 * Click on Sheet 1 Tab at the bottom 
   * Convert Release Year (Videos By Actor) to Discrete
   
-  ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/discrete.png)
+  ![](https://github.com/roberd13/tableau-dse6-demo/blob/master/images/discrete.png)
   
   * Drag Mpaa Rating to Color in the Marks section
    
-  ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/Marks.png)
+  ![](https://github.com/roberd13/tableau-dse6-demo/blob/master/images/Marks.png)
   
   * Drag Release Year (Videos By Actor) to Columns
   * Drag Mpaa Rating to Rows
   * Change the Mpaa Rating under rows to a Count Measure type by using the drop down 
   
-  ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/measure.png)
+  ![](https://github.com/roberd13/tableau-dse6-demo/blob/master/images/measure.png)
   
   * Select Stacked Bar on the Show Me snap on 
   
-  ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/showme.png)
+  ![](https://github.com/roberd13/tableau-dse6-demo/blob/master/images/showme.png)
   
   * Click Show Me to hide the snap on 
   
 * You now have a color coded graph with the Count of Movies grouped by Movie Ratings Per Year
 
-![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/graph.png)
+![](https://github.com/roberd13/tableau-dse6-demo/blob/master/images/graph.png)
 
 ### If you are curious what Tableau did under the hood, you can visit http://anyanalyticsnode:7080 which will take you to the Spark Master UI, you can then click *alwayson sql* which will direct you to the Alwayson SQL Application UI and you can see all of the queries performed during this tutorial.
 
 ### Master UI
-![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/Master%20UI.png)
+![](https://github.com/roberd13/tableau-dse6-demo/blob/master/images/Master%20UI.png)
 
 
 ### Thriftserver Application UI
-![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/Thrift%20UI.png)
+![](https://github.com/roberd13/tableau-dse6-demo/blob/master/images/Thrift%20UI.png)
