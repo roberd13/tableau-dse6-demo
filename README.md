@@ -138,7 +138,7 @@ docker exec -it my-dse wget -L https://raw.githubusercontent.com/roberd13/tablea
 
 ![](https://github.com/roberd13/tableau-dse6-demo/blob/master/images/graph.png)
 
-### If you are curious what Tableau did under the hood, you can visit http://anyanalyticsnode:7080 which will take you to the Spark Master UI, you can then click *alwayson sql* which will direct you to the Alwayson SQL Application UI and you can see all of the queries performed during this tutorial.
+### If you are curious what Tableau did under the hood, you can visit http://anyanalyticsnode:7080 which will take you to the Spark Master UI, you can then click *AlwaysOnSQL* which will direct you to the Alwayson SQL Application UI and you can see all of the queries performed during this tutorial.
 
 ### Master UI
 ![](https://github.com/roberd13/tableau-dse6-demo/blob/master/images/Master%20UI.png)
