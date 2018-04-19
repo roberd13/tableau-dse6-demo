@@ -11,7 +11,7 @@ This Tutorial was created using a DSE 6.0 Docker Container and Tableau Desktop 1
 ## Prerequisites
 
 * A DataStax Academy Account to Download and Install Simba ODBC Driver for Apache Spark:  If you do not already have one, visit https://academy.datastax.com/
-* A working DSE Docker container running an Analytics workload with the DataStax config volume mounted and the following Spar UI ports bound. 
+* A working DSE Docker container running an Analytics workload with the DataStax config volume mounted and the following Spark UI ports bound. 
   * 10000, 7080, 7077, 4040, 9077
   
 ```
@@ -36,26 +36,32 @@ For advanced configuration management, we’re providing a simple mechanism to l
 * Alwayson sql is enabled via the dse.yaml. I have created a custom dse.yaml with the setting preconfigured to use for this demo.
   * Download the dse.yaml found [here](https://github.com/roberd13/tableau-dse6-demo/blob/master/DemoData/dse.yaml) to your docker host machine and place it in the ~/config directory created when starting the DSE container
      * If running linux or mac you can run the following command
+     
 `wget -L https://raw.githubusercontent.com/roberd13/tableau-dse6-demo/master/DemoData/dse.yaml -O ~/config/dse.yaml`
   * Restart your dse container so it will pick up the custom dse.yaml and start alwayson sql
 
 ## Demo Data
 
-* Download the demo data to your DSE Docker Container from https://github.com/roberd13/tableau-dse6-demo/tree/master/DemoData using the following commands
+* You will need to get the demo data on the DSE Docker Container from https://github.com/roberd13/tableau-dse6-demo/tree/master/DemoData using the following commands
 
 ```
-Create directory for the demo data
+#Create directory for the demo data
 docker exec -it my-dse mkdir /opt/dse/demodata
+```
 
-Download the script to create the keyspace, table and load the data with dsbulk
+```
+#Download the script to create the keyspace, table and load the data with dsbulk
 docker exec -it my-dse wget -L https://raw.githubusercontent.com/roberd13/tableau-dse6-demo/master/DemoData/cqlscript.sh -O /opt/dse/demodata/cqlscript.sh
+```
 
-Change the permissions to allow execution of the script
+```
+#Change the permissions to allow execution of the script
 docker exec -it my-dse chmod +x /opt/dse/demodata/cqlscript.sh
+```
 
-Download the demo data
+```
+#Download the demo data
 docker exec -it my-dse wget -L https://raw.githubusercontent.com/roberd13/tableau-dse6-demo/master/DemoData/videos.csv -O /opt/dse/demodata/videos.csv
-
 docker exec -it my-dse wget -L https://raw.githubusercontent.com/roberd13/tableau-dse6-demo/master/DemoData/videos_by_actor.csv -O /opt/dse/demodata/videos_by_actor.csv
 ```
 
