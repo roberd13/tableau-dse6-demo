@@ -133,10 +133,10 @@ docker exec -it my-dse wget -L https://raw.githubusercontent.com/roberd13/tablea
 
 ![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/graph.png)
 
-### If you are curious what Tableau did under the hood, you can visit http://anyanalyticsnode:7080 which will take you to the Spark Master UI, you can then click *org.apache.spark.sql.hive.thriftserver.HiveThriftServer2* which will direct you to the Thriftserver Application UI and you can see all of the queries performed during this tutorial.
+### If you are curious what Tableau did under the hood, you can visit http://anyanalyticsnode:7080 which will take you to the Spark Master UI, you can then click *alwayson sql* which will direct you to the Alwayson SQL Application UI and you can see all of the queries performed during this tutorial.
 
 ### Master UI
-![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/MasterUI.png)
+![](https://github.com/roberd13/DSE-Spark-with-Tableau/blob/master/images/Master%20UI.png)
 
 
 ### Thriftserver Application UI
