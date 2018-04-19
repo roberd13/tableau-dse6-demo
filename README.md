@@ -37,8 +37,14 @@ For advanced configuration management, we’re providing a simple mechanism to l
   * Download the dse.yaml found [here](https://github.com/roberd13/tableau-dse6-demo/blob/master/DemoData/dse.yaml) to your docker host machine and place it in the ~/config directory created when starting the DSE container
      * If running linux or mac you can run the following command
      
-`wget -L https://raw.githubusercontent.com/roberd13/tableau-dse6-demo/master/DemoData/dse.yaml -O ~/config/dse.yaml`
+```
+wget -L https://raw.githubusercontent.com/roberd13/tableau-dse6-demo/master/DemoData/dse.yaml -O ~/config/dse.yaml
+```
   * Restart your dse container so it will pick up the custom dse.yaml and start alwayson sql
+
+```
+docker restart my-dse
+```
 
 ## Demo Data
 
@@ -50,7 +56,7 @@ docker exec -it my-dse mkdir /opt/dse/demodata
 ```
 
 ```
-#Download the script to create the keyspace, table and load the data with dsbulk
+#Download the script to create the keyspace, table and load the data 
 docker exec -it my-dse wget -L https://raw.githubusercontent.com/roberd13/tableau-dse6-demo/master/DemoData/cqlscript.sh -O /opt/dse/demodata/cqlscript.sh
 ```
 
@@ -65,7 +71,7 @@ docker exec -it my-dse wget -L https://raw.githubusercontent.com/roberd13/tablea
 docker exec -it my-dse wget -L https://raw.githubusercontent.com/roberd13/tableau-dse6-demo/master/DemoData/videos_by_actor.csv -O /opt/dse/demodata/videos_by_actor.csv
 ```
 
-  * Run the cqlscript.sh script to create schemas and load the data using the new dsebulk tool. A Keyspace named **killr_video** with 2 tables **videos** and **videos_by_actor** will be created.
+  * Run the cqlscript.sh script to create schemas and load the data using the new [dsebulk tool](https://docs.datastax.com/en/dse/6.0/dse-admin/datastax_enterprise/tools/dsbulk/dsbulkTOC.html). A Keyspace named **killr_video** with 2 tables **videos** and **videos_by_actor** will be created.
   
 ```
   docker exec -it  my-dse bash "/opt/dse/demodata/cqlscript.sh"
