@@ -10,7 +10,10 @@ This Tutorial was created using a DSE 6.0 Docker Container and Tableau Desktop 1
 
 ## Prerequisites
 
-* A DataStax Academy Account to Download and Install Simba ODBC Driver for Apache Spark:  If you do not already have one, visit https://academy.datastax.com/
+* Basic understanding of Docker images and containers. 
+
+* Docker installed on your local system, see [Docker Installation Instructions](https://docs.docker.com/engine/installation/). 
+
 * A working DSE Docker container running an Analytics workload with the DataStax config volume mounted and the following Spark UI ports bound. 
   * 10000, 7080, 7077, 4040, 9077
   
@@ -19,6 +22,8 @@ docker run -e DS_LICENSE=accept --name my-dse -p 10000:10000 -p 7080:7080 -p 707
 ```
   
 * Our Docker Images are hosted on [Docker Hub](https://hub.docker.com/r/datastax/dse-server/). For documentation including configuration options, environment variables, and compose examples head over to [DataStax Academy](https://academy.datastax.com/quick-downloads?utm_campaign=Docker_2019&utm_medium=web&utm_source=docker&utm_term=-&utm_content=Web_Academy_Downloads)
+
+* A DataStax Academy Account to Download and Install Simba ODBC Driver for Apache Spark:  If you do not already have one, visit https://academy.datastax.com/
    
 * A working Tableau Desktop install and basic Tableau understanding.  
   * You can download a free Tableau trial from https://www.tableau.com/products/trial 
