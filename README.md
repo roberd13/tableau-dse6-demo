@@ -48,7 +48,7 @@ docker restart my-dse
 
 ## Demo Data
 
-* You will need to get the demo data on the DSE Docker Container from https://github.com/roberd13/tableau-dse6-demo/tree/master/DemoData using the following commands
+* You will need to get the demo data on the DSE Docker Container from [here](https://github.com/roberd13/tableau-dse6-demo/tree/master/DemoData) using the following commands
 
 ```
 #Create directory for the demo data
@@ -71,7 +71,7 @@ docker exec -it my-dse wget -L https://raw.githubusercontent.com/roberd13/tablea
 docker exec -it my-dse wget -L https://raw.githubusercontent.com/roberd13/tableau-dse6-demo/master/DemoData/videos_by_actor.csv -O /opt/dse/demodata/videos_by_actor.csv
 ```
 
-  * Run the cqlscript.sh script to create schemas and load the data using the new [dsebulk tool](https://docs.datastax.com/en/dse/6.0/dse-admin/datastax_enterprise/tools/dsbulk/dsbulkTOC.html). A Keyspace named **killr_video** with 2 tables **videos** and **videos_by_actor** will be created.
+  * Run the cqlscript.sh script to create keyspace, tables and load the data using the new [dsebulk tool](https://docs.datastax.com/en/dse/6.0/dse-admin/datastax_enterprise/tools/dsbulk/dsbulkTOC.html). A Keyspace named **killr_video** with 2 tables **videos** and **videos_by_actor** will be created.
   
 ```
   docker exec -it  my-dse bash "/opt/dse/demodata/cqlscript.sh"
