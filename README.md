@@ -36,7 +36,9 @@ docker run -e DS_LICENSE=accept --name my-dse -p 10000:10000 -p 7080:7080 -p 707
 
 ## Enabling Alwayson SQL
 
-For advanced configuration management, we’re providing a simple mechanism to let you change or modify configurations without replacing or customizing the containers. You can add any of the approved config files to a mounted host volume and we’ll handle the hard work of mapping them within the container. You can read more about that feature [here](https://docs.datastax.com/en/docker/doc/docker/docker60/dockerDSEVolumes.html).  You enabled this feature when you started your DSE container and we will use it to enable alwayson sql
+For advanced configuration management, we’re providing a simple mechanism to let you change or modify configurations without replacing or customizing the containers. You can add any of the approved config files to a mounted host volume and we’ll handle the hard work of mapping them within the container. You enabled this feature when you started your DSE container and we will use it to enable alwayson sql.
+
+You can read more about that feature [here](https://docs.datastax.com/en/docker/doc/docker/docker60/dockerDSEVolumes.html). 
 
 * Alwayson sql is enabled via the dse.yaml. I have created a custom dse.yaml with the setting preconfigured to use for this demo.
   * Download the dse.yaml found [here](https://github.com/roberd13/tableau-dse6-demo/blob/master/DemoData/dse.yaml) to your docker host machine and place it in the ~/config directory created when starting the DSE container
