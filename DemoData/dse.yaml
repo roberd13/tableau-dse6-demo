@@ -529,15 +529,15 @@ spark_security_encryption_enabled: false
 # The default 0.7 for cores and memory corresponds to the default value of initial_spark_worker_resources 0.7.
 # DSE does not support setting Spark Worker cores and memory through environment variables SPARK_WORKER_CORES
 # and SPARK_WORKER_MEMORY.
-# resource_manager_options:
-#     worker_options:
-#         cores_total: 0.7
-#         memory_total: 0.6
+resource_manager_options:
+    worker_options:
+        cores_total: 0.7
+        memory_total: 0.6
 #
-#         workpools:
-#             - name: alwayson_sql
-#               cores: 0.25
-#               memory: 0.25
+        workpools:
+            - name: alwayson_sql
+              cores: 0.6
+              memory: 0.6
 
 # In DSE 5.1 and later: Communication between Spark applications and the resource manager are routed through
 # the CQL native protocol. Enabling client encryption in cassandra.yaml will also enable encryption for
