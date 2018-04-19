@@ -85,7 +85,7 @@ docker exec -it my-dse wget -L https://raw.githubusercontent.com/roberd13/tablea
 
 ## Now lets Create a Connection to DSE in Tableau
 
-* Start the Spark SQL Thriftserver on one of your DSE analytics nodes by running `dse spark-sql-thriftserver start`
+* Lets make sure that AlwaysOnSQL is running  `docker exec -it my-dse dse client-tool alwayson-sql status` if so continue
 * Open Tableau and create a connection to DSE by selecting Other Databases (ODBC) under To a Server.  You may need to click more to show this option
 
 * Setup your connection by selecting Driver => Simba Spark ODBC Driver => Connect
