@@ -598,10 +598,10 @@ spark_process_runner:
 
 # AlwaysOn SQL options have dependence on workpool setting of resource_manager_options. Set workpool configuration if you  
 # enable alwayson_sql_options.
- alwayson_sql_options:
+alwayson_sql_options:
 #     # Set to true to enable the node for AlwaysOn SQL. Only an Analytics node
 #     # can be enabled as an AlwaysOn SQL node.
-     enabled: True
+    enabled: True
 #
 #     # AlwaysOn SQL Thrift port
 #     thrift_port: 10000
