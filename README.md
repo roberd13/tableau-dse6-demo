@@ -6,7 +6,7 @@
 
 ### In this simple tutorial we will walk through connecting Tableau to a DataStax Enterprise (DSE) 6.0 Docker Container utilizing DSE Alwayson SQL via the Spark ODBC driver and creating a simple Tableau workbook. We will Utilize DSE analytics to perform the computations, joins and aggregates on the server side (DSE) which is faster and more effecient, while harnesing Tableau to visualize the data.
 
-This Tutorial was created using a DSE 6.0 Docker Container and Tableau Desktop 10.5 running on Windows.
+This Tutorial was created using a DSE 6.0 Docker Container, Tableau Desktop 10.5 running on Windows and Spark ODBC driver 	1.2.6.1007.
 
 ## Prerequisites
 
