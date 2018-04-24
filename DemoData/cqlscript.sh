@@ -1,5 +1,3 @@
-#!bin/bash
-
 set -e
 
 cqlsh `hostname -i` -e "CREATE KEYSPACE IF NOT EXISTS killr_video WITH replication = {'class': 'SimpleStrategy','replication_factor' : 1}"
