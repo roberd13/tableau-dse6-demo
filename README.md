@@ -86,17 +86,18 @@ docker exec -it my-dse wget -L https://raw.githubusercontent.com/roberd13/tablea
 ## Now lets Create a Connection to DSE in Tableau
 
 * Lets make sure that AlwaysOnSQL is running  `docker exec -it my-dse dse client-tool alwayson-sql status` if so continue
-* Open Tableau and create a connection to DSE by selecting Other Databases (ODBC) under To a Server.  You may need to click more to show this option
+* Open Tableau and create a connection to DSE by selecting Spark SQL under To a Server.  You may need to click more to show this option
 
-* Setup your connection by selecting Driver => Simba Spark ODBC Driver => Connect
-  * Enter a description
-  * Add the ipaddress of the Docker host port 10000 is bound from the DSE container to hosts and click OK
-  * Once the query completes click **Sign in** 
+* Setup your connection by 
+  * Add the ipaddress of the Docker host port 10000 is bound from the DSE container to hosts 
+  * Set Port to 10000
+  * Set Type to SparkThriftServer
+  * Authentication to username 
+  * Click **Sign in** 
 
-![](https://github.com/roberd13/tableau-dse6-demo/blob/master/images/connection.png)
+![](https://github.com/roberd13/tableau-dse6-demo/blob/master/images/sparksql_tableau.png)
 
 * When your workbook opens after Signing in. On the Data Source tab under connections.
-  * Select **Spark** as the Database
   * Search Schema using the drop down and Select **Killr_video** 
   * Search Table using the drop down and your tables will be listed
   * Drag **videos and videos_by_actor** to the tables area
