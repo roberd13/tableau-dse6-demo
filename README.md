@@ -146,5 +146,5 @@ docker exec -it my-dse wget -L https://raw.githubusercontent.com/roberd13/tablea
 ![](https://github.com/roberd13/tableau-dse6-demo/blob/master/images/Master%20UI.png)
 
 
-### Thriftserver Application UI
+### Application UI
 ![](https://github.com/roberd13/tableau-dse6-demo/blob/master/images/Thrift%20UI.png)
