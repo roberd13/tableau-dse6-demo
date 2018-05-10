@@ -2,7 +2,7 @@
 
 Have you heard about all the new features in DSE 6, especially that it's 2x faster?  If not check out Robin Schumacher [blog](https://www.datastax.com/2018/04/datastax-enterprise-6-the-distributed-cloud-database-designed-for-hybrid-cloud). 
 
-DSE isn’t the only thing that is 2x faster! With the new TPC and AlwaysOn SQL features using the Spark Sql connection in Tabluea, you can now visualize your data 2x the transfer speed compared to previous DSE versions.
+DSE isn’t the only thing that is 2x faster! With the new TPC and AlwaysOn SQL features along with using the Spark Sql connection in Tabluea, you can now visualize your data 2x the transfer speed compared to previous DSE versions.
 
 Our brains process visual information very efficiently, visualizing data graphically greatly speeds up the process of data analysis. 
 
