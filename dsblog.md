@@ -11,6 +11,7 @@ Which of the following is easier to analize?
 
 ![](https://github.com/roberd13/tableau-dse6-demo/blob/master/images/numbers.png)  
 
+OR
 
 ![](https://github.com/roberd13/tableau-dse6-demo/blob/master/images/graph.png)
 
