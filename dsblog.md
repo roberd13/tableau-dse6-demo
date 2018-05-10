@@ -1,4 +1,4 @@
-# Visualiz your data in Tableau 2x faster with DSE 6
+# Visualize your data in Tableau 2x faster with DSE 6
 
 Have you heard about all the new features in DSE 6, especially that it's 2x faster?  If not check out Robin Schumacher [blog](https://www.datastax.com/2018/04/datastax-enterprise-6-the-distributed-cloud-database-designed-for-hybrid-cloud). 
 
@@ -7,7 +7,7 @@ Have you heard about all the new features in DSE 6, especially that it's 2x fast
  Our brains process visual information very efficiently, visualizing data graphically greatly speeds up the process of data analysis. 
  So a quick brain teaser, which of the following is easier to analize?
 
- insert images.
+![](https://github.com/roberd13/tableau-dse6-demo/blob/master/images/numbers.png)   ![](https://github.com/roberd13/tableau-dse6-demo/blob/master/images/graph.png)
 
  The visual graph right?  If the numbers were easier to analize,  you are the outlier here.  
 
@@ -20,4 +20,4 @@ You have always been able to use the Simba Spark ODBC driver to create a connect
 
 With this information at hand, AlwaysOn SQL was designed to address the shortcomings of the other approaches and brings a production-ready, enterprise-grade ODBC/JDBC service to DSE 6. We also worked with Magnitude|Simba to enhance the ODBC/JDBC driver to allow Spark SQL to seamlessly use the AlwaysOn Sql REST API. To learn more about AlwaysOn SQL and its history check out Brian Hess's AlwaysOn Sql [blog](https://www.datastax.com/2018/05/introducing-alwayson-sql-for-dse-analytics)
 
-This leaves one thing left to do!  Take this for a test drive and see the difference for yourself, check out this [tutorial](https://academy.datastax.com/content/visualizing-your-data-tableau-using-dse-6-docker-images) which leverages DSE 6 Docker images.
+# This leaves one thing left to do!  Take this for a test drive and see the difference for yourself, check out this [tutorial](https://academy.datastax.com/content/visualizing-your-data-tableau-using-dse-6-docker-images) which leverages DSE 6 Docker images.
