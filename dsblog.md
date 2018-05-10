@@ -18,7 +18,7 @@ The visual graph right?  If the numbers were easier to analize,  you are the out
 If we are able to visualize the data 2x faster, this greatly improves your effiency and as the data sets become more complex, the potential time savings become even greater.
 
 
-### How We Got Here
+### How We Made It To This Point
 
 You have always been able to use the Simba Spark ODBC driver to create a connection with Tableau, but in DSE 5.1 SQL access was handled by the Spark SQL Thriftserver. There are a variety of reasons which we will not get into in this blog post that makes Spark SQL Thriftserver less desirable and a non production ready enterprise-grade ODBC/JDBC service.  
 
