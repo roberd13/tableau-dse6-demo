@@ -5,6 +5,7 @@ Have you heard about all the new features in DSE 6, especially that it's 2x fast
 DSE isn’t the only thing that is 2x faster! With the new TPC and AlwaysOn SQL features using the Spark Sql connection in Tabluea, you can now visualize your data 2x the transfer speed compared to previous DSE versions.
 
 Our brains process visual information very efficiently, visualizing data graphically greatly speeds up the process of data analysis. 
+
 Which of the following is easier to analize?
 
 ![](https://github.com/roberd13/tableau-dse6-demo/blob/master/images/numbers.png)  
